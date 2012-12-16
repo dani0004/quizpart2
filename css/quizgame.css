@@ -1,0 +1,191 @@
+html{
+	font:100%/1.5 Arial,Helvetica,sans-serif
+	
+}
+.clearfix{
+	margin:0;
+	padding:0;
+}
+.spacer1{
+	padding:0 0.5em 0 0.5em;
+}
+.spacer2{
+	padding:0.5em 0  0.5em 0;
+}
+.questionsList{
+	
+}
+.questionsList li{
+	
+	border:0.1em solid #FFF;
+	padding:0.6em;
+
+}
+
+label{
+	/*text-align:right;*/
+	
+	width:8em;
+	
+}
+fieldarea{
+	display:block;
+	width:100%;
+	padding-right:0;
+	margin-right:0;
+}
+.ui-radio{
+	display:inline-block;
+	width:80%;
+}
+
+input{
+	/*width:30px;
+	width:30px;*/
+}
+
+.questionsList li h3{
+	/*clear:both;
+	display:inline-block;
+	font-size:110%;*/
+}
+h3{
+	width:100%;
+}
+h4
+{
+	clear:both;
+	font-size:100%;
+}
+.scoring,
+.scgeneral{
+	background-color:#5D7D94;
+	font-size:60%;
+	color:#000;
+	font-style:normal;
+	text-shadow:none;
+
+	
+}
+.scoring p{
+	display:inline-block;
+	width:10%;
+	
+}
+.fadeText{
+	color:#999;
+}
+/*.ui-btn-up-b:visited
+
+{
+	color:#999;
+}*/
+.ui-radio label{
+	/*font-size:0.5em;
+	width:100%;
+	margin-right:0.15em;*/
+}
+.ui-grid-b-outer{
+	border-bottom:0.1em #999999;
+	
+}
+.ui-block-b{
+	border-left:0.1em solid #03F;
+	border-right:0.1em solid #03F;
+	width:60%;
+}
+.ui-block-a{
+	width:30%;
+}
+.scnames{
+	margin:0;
+	padding:0;
+	background-color:#DBE1BA;
+	border-bottom:0.1em solid #03F;
+	padding-left:0.25em;
+	font-size:100%;
+	text-transform:capitalize;
+	
+	
+}
+.scgeneral2 p{
+	display:inline-block;
+	margin:0;
+	padding:0;
+	width:10%;
+	min-width:1em;
+	background-color:#548bb8;
+	color:#FFF;
+	border-right:0.1em solid #FFF;
+	font-style:normal;
+	font-weight:normal;
+}
+.bclass .ui-btn,
+.playagain{
+	width:60%;
+	background-color:#548bb8;
+	color:#03F;
+	display:inline-block;
+}
+
+.bclass .ui-btn:focus,
+.bclass .ui-btn:active,
+.playagain:focus,
+.playagain:active{
+	background-color:rgb(0,102,255);
+	color:rgb(153,153,0);
+}
+.bclass{
+}
+
+
+.init {
+margin:0;
+padding:0;
+}
+.headers {
+	padding:0.15em;
+	border-bottom:0.1em solid #03F;
+	text-align:center;
+	font-size:70%;
+	background-color:#d95924;
+}
+outer{
+border:0.1em solid #03F;
+	
+}
+.hideme{
+	
+	display:none;
+
+}
+
+.scores{
+	list-style-type:none;
+	
+	margin:0;
+	padding:0;
+	/*margin:0 0.5em 0 0.5em;
+	padding:0;*/
+	
+}
+.scores li ul li{
+	
+	border:1px solid #F60;
+	
+	background-color:#06F;
+	font-weight:200;
+}
+.scores .scnames,
+.scores .scoring{
+	font:90%;
+}
+.scores li {
+	
+	font:110%;
+	text-transform:capitalize;
+	font-weight:bold;
+	
+	
+}
+

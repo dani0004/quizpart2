@@ -1,0 +1,131 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Quiz App</title>
+	<link rel="stylesheet" href="themes/games1.min.css" />
+	<!--<link rel="stylesheet" href="./themes/games1.min.css" />-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="./css/quizgame.css"/>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	 
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+ <script src="./js/game-1.js"></script>	
+	
+	
+    <style>
+    .right{
+		background:green;
+		background-color:green;
+	}
+	.wrong{
+		background:red;
+		background-color:red;	
+	}
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="welcome" data-theme="d" data-title="welcome">
+        <div data-role="header" data-theme="d">
+            <h1 data-theme="a">Welcome</h1>
+        </div>
+        <div data-role="content" data-theme="d">
+        	<h2>Welcome to the Quiz Game</h2>
+            <p>Play the Trivia game by clicking the Play button at the bottom of the screen, choose a category and then answer the questions in any order you want.</p>
+            <p>Please register and choose the category to proceed.  Some categories are still in progress and are grayed out.  You may press help at any time to ask for assistance.  Some questions will have more than one correct answer.  You may click on the answer button to find out the correct answer for each question as you proceed.  Have fun and enjoy the holidays! </p>
+			<ul data-role="listview" data-theme="b" id="playlist">
+			<li ><a href="#play" >Science and Technology</a></li>
+			<li >Geography - under construction</li>
+			<li>History- under construction</li>
+			</ul> 
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+            <ul data-theme="b">
+            	<li><a href="#play" data-role="button" data-icon="star" data-iconpos="top" class="playBtn">Play</a></li>
+            	<li><a href="#scores" data-role="button" data-icon="grid" data-iconpos="top" class="scoresBtn">Scores</a></li>
+            	<li><a href="#help" data-role="button" data-icon="info" data-iconpos="top" data-rel="dialog" class="helpBtn">Help</a></li>
+            </ul>
+            </div>
+        </div>
+    </div><!-- end of welcome footer -->
+<!-- start of play page -->
+	<div data-role="page" id="play" data-theme="a">
+        <div data-role="header" data-theme="b">
+            <h1  >Play the Game</h1>
+        </div>
+        <div data-role="content" id="gamearea" data-theme="c">
+        	<!--
+            Step one asks for a username through a popup
+            First list is of questions
+            Second list is of the answers
+            Lists of questions and answers are loaded through a script file-->
+
+            <div id="msg">
+            	<!-- scoring feedback to the user goes here as they play -->
+                
+            </div>
+            <div data-role="popup" id="userform" data-overlay-theme="a" data-theme="a" >
+            	<div data-role="header" data-theme="a">
+                	<h1>User Name</h1>
+                </div>
+                <div data-role="content" data-theme = "c">
+                    <!-- form to gather username -->
+                    <form name="nameform" id="nameform" >
+                        <p>
+                        	<input type="text" name="username" id="username" placeholder="username" value=""/>
+                        </p>
+                        <p>
+                       		<input type="button" name="btnSubmit" id="btnSubmit" value="Play"/>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+            <ul data-theme="b">
+            	<li><a href="#play" data-role="button" data-icon="star" data-iconpos="top" class="playBtn">Play</a></li>
+            	<li><a href="#scores" data-role="button" data-icon="grid" data-iconpos="top" class="scoresBtn">Scores</a></li>
+            	<li><a href="#help" data-role="button" data-icon="info" data-iconpos="top" data-rel="dialog" class="helpBtn">Help</a></li>
+            </ul>
+            </div>
+        </div>
+    </div><!-- end of PLAY footer -->
+    <!-- START of SCORES SECTION -->
+    <div data-role="page" id="scores" data-theme="a">
+        <div data-role="header">
+            <h1 data-theme="c" >High Scores</h1>
+        </div>
+        <div data-role="content" id="scoretable" data-theme="c">
+        	<!--
+            List of high scores comes from a loaded script file or localStorage.
+            Saving a score at the end of a game takes an AJAX call or localStorage
+            -->
+            <div id="recent"></div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+            <ul data-theme="b">
+            	<li><a href="#play" data-role="button" data-icon="star" data-iconpos="top" class="playBtn">Play</a></li>
+            	<li><a href="#scores" data-role="button" data-icon="grid" data-iconpos="top" class="scoresBtn">Scores</a></li>
+            	<li><a href="#help" data-role="button" data-icon="info" data-iconpos="top" data-rel="dialog" class="helpBtn">Help</a></li>
+            </ul>
+            </div>
+        </div>
+    </div><!-- end of scores page -->
+    
+	<!-- START of HELP page -->
+    <div data-role="page" id="help">
+        <div data-role="header">
+            <h1>Help</h1>
+        </div>
+        <div data-role="content">
+        	<p id="helpdata">Dialog of help info</p>
+            <!-- Add more help info here -->
+        </div>
+        
+    </div><!-- END of HELP page -->
+</body>
+</html>

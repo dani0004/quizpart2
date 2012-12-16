@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="game-1.js"></script>
+    <style>
+    .right{
+		background:green;
+		background-color:green;
+	}
+	.wrong{
+		background:red;
+		background-color:red;	
+	}
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="welcome">
+        <div data-role="header">
+            <h1>Welcome</h1>
+        </div>
+        <div data-role="content">
+        	<h2>Welcome to the Quiz Game</h2>
+            <p>Play the Trivia game by clicking the Play button at the bottom of the screen, choose a category and then answer the questions in any order you want.</p>
+            <!-- Add new welcome text here -->
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+            <ul>
+            	<li><a href="#play" data-role="button" data-icon="star" data-iconpos="top" class="playBtn">Play</a></li>
+            	<li><a href="#scores" data-role="button" data-icon="grid" data-iconpos="top" class="scoresBtn">Scores</a></li>
+            	<li><a href="#help" data-role="button" data-icon="info" data-iconpos="top" data-rel="dialog" class="helpBtn">Help</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+	<div data-role="page" id="play">
+        <div data-role="header">
+            <h1>Play the Game</h1>
+        </div>
+        <div data-role="content" id="gamearea">
+        	<!--
+            Step one asks for a username through a popup
+            First list is of questions
+            Second list is of the answers
+            Lists of questions and answers are loaded through a script file
+            -->
+            <div id="msg">
+            	<!-- scoring feedback to the user goes here as they play -->
+                
+            </div>
+            <div data-role="popup" id="userform" data-overlay-theme="a" data-theme="d" >
+            	<div data-role="header">
+                	<h1>User Name</h1>
+                </div>
+                <div data-role="content">
+                    <!-- form to gather username -->
+                    <form name="nameform" id="nameform" >
+                        <p>
+                        	<input type="text" name="username" id="username" placeholder="username" value=""/>
+                        </p>
+                        <p>
+                       		<input type="button" name="btnSubmit" id="btnSubmit" value="Play"/>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+            <ul>
+            	<li><a href="#play" data-role="button" data-icon="star" data-iconpos="top" class="playBtn">Play</a></li>
+            	<li><a href="#scores" data-role="button" data-icon="grid" data-iconpos="top" class="scoresBtn">Scores</a></li>
+            	<li><a href="#help" data-role="button" data-icon="info" data-iconpos="top" data-rel="dialog" class="helpBtn">Help</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div data-role="page" id="scores">
+        <div data-role="header">
+            <h1>High Scores</h1>
+        </div>
+        <div data-role="content" id="scoretable">
+        	<!--
+            List of high scores comes from a loaded script file or localStorage.
+            Saving a score at the end of a game takes an AJAX call or localStorage
+            -->
+            <div id="recent"></div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+            <ul>
+            	<li><a href="#play" data-role="button" data-icon="star" data-iconpos="top" class="playBtn">Play</a></li>
+            	<li><a href="#scores" data-role="button" data-icon="grid" data-iconpos="top" class="scoresBtn">Scores</a></li>
+            	<li><a href="#help" data-role="button" data-icon="info" data-iconpos="top" data-rel="dialog" class="helpBtn">Help</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div data-role="page" id="help">
+        <div data-role="header">
+            <h1>Help</h1>
+        </div>
+        <div data-role="content">
+        	<p>Dialog of help info</p>
+            <!-- Add more help info here -->
+        </div>
+        
+    </div>
+</body>
+</html>
